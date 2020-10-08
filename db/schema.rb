@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_08_064208) do
+ActiveRecord::Schema.define(version: 2020_10_08_124050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,21 @@ ActiveRecord::Schema.define(version: 2020_10_08_064208) do
     t.index ["user_id"], name: "index_forces_on_user_id"
   end
 
+  create_table "units", force: :cascade do |t|
+    t.bigint "force_id", null: false
+    t.string "name"
+    t.string "role"
+    t.integer "supply_value"
+    t.integer "experience_points"
+    t.integer "crusade_points"
+    t.string "unit_type"
+    t.string "rank"
+    t.text "equipment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["force_id"], name: "index_units_on_force_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,4 +59,5 @@ ActiveRecord::Schema.define(version: 2020_10_08_064208) do
   end
 
   add_foreign_key "forces", "users"
+  add_foreign_key "units", "forces"
 end
