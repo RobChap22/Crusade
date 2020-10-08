@@ -25,6 +25,16 @@ puts "Creating forces..."
 tst = Force.create(
   user: rob,
   name: 'Test',
+  faction: 'Necron',
+  battle_tally: 0,
+  battles_won: 0,
+  requisition_points: 5,
+  supply_limit: 50,
+  supply_used: 0
+)
+tsttwo = Force.create(
+  user: micky,
+  name: 'Test',
   faction: 'Imperium',
   battle_tally: 0,
   battles_won: 0,
