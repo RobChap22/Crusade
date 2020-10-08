@@ -24,7 +24,7 @@ puts "Created #{User.count} users!"
 puts "Creating forces..."
 tst = Force.create(
   user: rob,
-  name: 'Test',
+  name: 'robTest',
   faction: 'Necron',
   battle_tally: 0,
   battles_won: 0,
@@ -34,7 +34,7 @@ tst = Force.create(
 )
 tsttwo = Force.create(
   user: micky,
-  name: 'Test',
+  name: 'mickyTest',
   faction: 'Imperium',
   battle_tally: 0,
   battles_won: 0,
