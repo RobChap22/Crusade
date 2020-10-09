@@ -21,4 +21,11 @@ class ForcesController < ApplicationController
       render :new
     end
   end
+
+
+  private
+
+  def force_params
+    params.require(:force).permit(:name, :user, :faction, :power)
+  end
 end
