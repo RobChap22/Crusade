@@ -3,4 +3,5 @@
   <% @forces.each do |force| %>
     <li><%= link_to force.name, force_path(force) %></li>
   <% end %>
+  <%= link_to 'New', new_force_path %>
 </ul>
