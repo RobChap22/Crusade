@@ -1,6 +1,11 @@
+
+<h1><%= @force.name %></h1>
+<h3><%= @force.user.username %></h3>
+<h2><%= @force.faction %></h2>
+<p>Units:</p>
 <ul>
-  <li><%= @force.name %></li>
-  <li><%= @force.user.username %></li>
-  <li><%= @force.faction %></li>
-  <li><%= link_to "Back", forces_path %></li>
+  <% @force.units.each do |unit| %>
+    <li><%= unit.name %></li>
+  <% end %>
 </ul>
+<%= link_to "Back", forces_path %>
