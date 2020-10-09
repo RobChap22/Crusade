@@ -1,0 +1,8 @@
+<%= simple_form_for @force do |f| %>
+  <%= f.input :name %>
+  <%= f.input :faction, collection: ['Imperium', 'Chaos', 'Aeldari', 'Tyranids', 'Orks', 'Necrons', 'Tau Empire'] %>
+  <%= f.input :supply_type, as: :radio_buttons,
+    collection: [['Power'], ['Points']],
+    label: 'Supply system' %>
+  <%= f.button :submit, 'Create' %>
+<% end %>
