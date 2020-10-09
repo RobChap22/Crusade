@@ -1,6 +1,6 @@
 
 <ul>
   <% @forces.each do |force| %>
-    <li><%= force.name %></li>
+    <li><%= link_to force.name, force_path(force) %></li>
   <% end %>
 </ul>
