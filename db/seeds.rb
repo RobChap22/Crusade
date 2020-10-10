@@ -33,7 +33,7 @@ tst = Force.create!(
   requisition_points: 5,
   supply_limit: 50,
   supply_used: 0,
-  supply_type: 'power'
+  power: true
 )
 
 tsttwo = Force.create!(
@@ -45,7 +45,7 @@ tsttwo = Force.create!(
   requisition_points: 5,
   supply_limit: 50,
   supply_used: 0,
-  supply_type: 'power'
+  power: true
 )
 puts "Created #{Force.count} forces!"
 
