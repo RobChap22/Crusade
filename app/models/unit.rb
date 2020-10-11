@@ -7,7 +7,7 @@ class Unit < ApplicationRecord
   RANK = ['Battle-ready', 'Blooded', 'Battle-hardened', 'Heroic', 'Legendary']
   validates :name, presence: true
   validates :role, presence: true, inclusion: { in: ROLES }
-  validates :rank, inclusion: { in: RANK }
+  # validates :rank, inclusion: { in: RANK }
   validates :supply_value, presence: true
 
 

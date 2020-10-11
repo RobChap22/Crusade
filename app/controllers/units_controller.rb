@@ -14,8 +14,9 @@ class UnitsController < ApplicationController
 
     @unit = Unit.new(unit_params)
     @unit.force = @force
+
     if @unit.save
-      redirect_to unit_path(@unit)
+      redirect_to force_unit_path(@unit)
     else
       render :new
     end
@@ -24,8 +25,8 @@ class UnitsController < ApplicationController
 
   private
 
-  def force_params
-    params.require(:force).permit(:name, :role, :supply_value, :unit_type, :equipment)
+  def unit_params
+    params.require(:unit).permit(:name, :role, :supply_value, :unit_type, :equipment, :force_id, :rank)
   end
 
 end
