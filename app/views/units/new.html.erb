@@ -1,6 +1,6 @@
 
 
-<%= simple_form_for @force.unit do |f| %>
+<%= simple_form_for [@force, @unit] do |f| %>
   <%= f.input :name %>
   <%= f.input :role, collection: ['HQ', 'Elite', 'Troops', 'Fast Attack', 'Heavy Support', 'Lord of War', 'Other'] %>
   <%= f.input :supply_value %>
