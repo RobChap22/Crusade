@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'forces#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :forces, only: [:new, :create, :index, :show] do
-    resources :units, only: [:new, :create, :show]
+    resources :units, only: [:new, :create]
   end
+  resources :units, only: [:show]
 end

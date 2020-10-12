@@ -16,7 +16,7 @@ class UnitsController < ApplicationController
     @unit.force = @force
 
     if @unit.save
-      redirect_to force_unit_path(@unit)
+      redirect_to unit_path(@unit)
     else
       render :new
     end
